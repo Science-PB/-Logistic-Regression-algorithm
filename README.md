@@ -34,13 +34,16 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 
 3) Fit logistic regression and calculate the probabilities
 
+<img width="873" alt="Screen Shot 2020-11-17 at 2 08 33 AM" src="https://user-images.githubusercontent.com/66921930/99357461-f286b380-2879-11eb-936e-9d3dc51e8b5e.png">
 
 
 4) We get an accuracy: 0.956 which is a very good result. We visualize the digit 0.
 
+<img width="479" alt="Screen Shot 2020-11-17 at 2 08 50 AM" src="https://user-images.githubusercontent.com/66921930/99357462-f31f4a00-2879-11eb-9e5e-c8f7e7013fcc.png">
 
 5) We repeat the same algorithm for the digit one. create a zero_label column where the dummy variables will be located.
 
+<img width="502" alt="Screen Shot 2020-11-17 at 2 09 04 AM" src="https://user-images.githubusercontent.com/66921930/99357464-f3b7e080-2879-11eb-9895-d848928ae9be.png">
 
 6) Then fit the Logistic Regression for the dataset and compute predicted probabilities.
 
@@ -49,3 +52,7 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 7) We got an accuracy of 0.991. Let's visualize the result.
 
 <img width="532" alt="Screen Shot 2020-11-17 at 2 01 00 AM" src="https://user-images.githubusercontent.com/66921930/99356840-dc2c2800-2878-11eb-8de2-68b623580f52.png">
+
+
+8) We do the same algorithm of actions for the remaining digits.
+
