@@ -25,11 +25,15 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 
 1) First, we load all the necessary libraries and functions that we need to develop the algorithm. Further, the columns in the dataset will be named, the training and test dataset will be loaded into the environment.
 
+<img width="768" alt="Screen Shot 2020-11-17 at 1 59 16 AM" src="https://user-images.githubusercontent.com/66921930/99356827-d898a100-2878-11eb-8fd7-5545b4b738e0.png">
+
 
 2) We need to build 10 different models for each of the digits and find the probability of image by pickles. Let's start with 0. To do this, create a zero_label column where the dummy variables will be located. Let's create features and target variables for test and train dataset.
 
+<img width="529" alt="Screen Shot 2020-11-17 at 1 59 47 AM" src="https://user-images.githubusercontent.com/66921930/99356832-d9c9ce00-2878-11eb-85d3-d7d157a45020.png">
 
 3) Fit logistic regression and calculate the probabilities
+
 
 
 4) We get an accuracy: 0.956 which is a very good result. We visualize the digit 0.
@@ -40,6 +44,8 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 
 6) Then fit the Logistic Regression for the dataset and compute predicted probabilities.
 
+<img width="561" alt="Screen Shot 2020-11-17 at 2 00 45 AM" src="https://user-images.githubusercontent.com/66921930/99356839-db939180-2878-11eb-9429-15288f17d906.png">
 
 7) We got an accuracy of 0.991. Let's visualize the result.
 
+<img width="532" alt="Screen Shot 2020-11-17 at 2 01 00 AM" src="https://user-images.githubusercontent.com/66921930/99356840-dc2c2800-2878-11eb-8de2-68b623580f52.png">
