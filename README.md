@@ -56,3 +56,30 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 
 8) We do the same algorithm of actions for the remaining digits.
 
+<img width="286" alt="Screen Shot 2020-11-17 at 2 11 27 AM" src="https://user-images.githubusercontent.com/66921930/99357736-6e80fb80-287a-11eb-9798-10c2db653673.png">
+<img width="353" alt="Screen Shot 2020-11-17 at 2 11 36 AM" src="https://user-images.githubusercontent.com/66921930/99357739-6f199200-287a-11eb-8f91-a797dbd003e4.png">
+<img width="413" alt="Screen Shot 2020-11-17 at 2 11 42 AM" src="https://user-images.githubusercontent.com/66921930/99357740-6fb22880-287a-11eb-8772-9cb43cca1786.png">
+<img width="437" alt="Screen Shot 2020-11-17 at 2 11 47 AM" src="https://user-images.githubusercontent.com/66921930/99357742-704abf00-287a-11eb-8576-3c256e2cd0bc.png">
+<img width="416" alt="Screen Shot 2020-11-17 at 2 11 53 AM" src="https://user-images.githubusercontent.com/66921930/99357744-70e35580-287a-11eb-939d-67ed997f9692.png">
+<img width="462" alt="Screen Shot 2020-11-17 at 2 11 58 AM" src="https://user-images.githubusercontent.com/66921930/99357746-717bec00-287a-11eb-8379-5a765a818939.png">
+<img width="393" alt="Screen Shot 2020-11-17 at 2 12 04 AM" src="https://user-images.githubusercontent.com/66921930/99357748-717bec00-287a-11eb-89d6-416a8cbeef03.png">
+<img width="605" alt="Screen Shot 2020-11-17 at 2 12 09 AM" src="https://user-images.githubusercontent.com/66921930/99357749-717bec00-287a-11eb-991a-0aaaa69e2976.png">
+
+
+
+9) Next, we create a dataframe with all the obtained probabilities for the clothes.
+
+
+
+10) We use the softmax function and define the label for the clothes.
+
+
+
+11) We create a confusion matrix to better understand where the model was right and where it made a mistake.
+
+
+
+
+
+
+
