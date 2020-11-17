@@ -69,15 +69,16 @@ Data: The dataset consists of 784 features columns and 1 target column.(Figure 2
 
 9) Next, we create a dataframe with all the obtained probabilities for the clothes.
 
+<img width="897" alt="Screen Shot 2020-11-17 at 2 14 36 AM" src="https://user-images.githubusercontent.com/66921930/99357942-d1729280-287a-11eb-8674-7c539b1c2666.png">
 
 
 10) We use the softmax function and define the label for the clothes.
 
-
+<img width="974" alt="Screen Shot 2020-11-17 at 2 15 02 AM" src="https://user-images.githubusercontent.com/66921930/99357947-d2a3bf80-287a-11eb-92dd-2ce5d148e03e.png">
 
 11) We create a confusion matrix to better understand where the model was right and where it made a mistake.
 
-
+<img width="676" alt="Screen Shot 2020-11-17 at 2 15 26 AM" src="https://user-images.githubusercontent.com/66921930/99357948-d3d4ec80-287a-11eb-909d-aac8ab81db2d.png">
 
 
 
