@@ -1,0 +1,465 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn import metrics
+from sklearn.metrics import confusion_matrix
+
+colom = "Class"
+coloom = "Pixel"
+colom_name = ["Class"]
+
+for i in range(1,785):
+    colom_name.append(coloom+" "+str(i))
+    
+data_test = pd.read_csv(r"/Users/boris/Downloads/fashion/fashion_test.csv",names=colom_name)
+data_train = pd.read_csv(r"/Users/boris/Downloads/fashion/fashion_train.csv", names=colom_name)
+data_train.head(25)
+
+###### Digit zero #########
+# Traning data creation 
+train_0 = data_train
+train_0["zero_label"] = 0
+train_0.loc[train_0["Class"] == 0, "zero_label"] = 1
+
+# Test data creation 
+test_0 = data_test
+test_0["zero_label"] = 0
+test_0.loc[test_0["Class"] == 0, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_0 = train_0.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_0 = train_0["zero_label"]
+y_train_0.head()
+
+# Assign feature varible for testing dataset
+x_test_0 = test_0.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_0 = test_0["zero_label"]
+
+# Develop the classifier 
+lg_0 = LogisticRegression()
+lg_0.fit(X_train_0,y_train_0)
+lg_pred_0 = lg_0.predict(x_test_0)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_0,lg_pred_0))
+
+# Compute predicted probabilities
+predict_prob_0 = lg_0.predict_proba(x_test_0)
+predict_prob_0[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_0.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(1)
+
+
+###### Digit one #########
+# Traning data creation 
+train_1 = data_train
+train_1["zero_label"] = 0
+train_1.loc[train_1["Class"] == 1, "zero_label"] = 1
+
+# Test data creation 
+test_1 = data_test
+test_1["zero_label"] = 0
+test_1.loc[test_1["Class"] == 1, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_1 = train_1.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_1 = train_1["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_1 = test_1.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_1 = test_1["zero_label"]
+
+# Develop the classifier 
+lg_1 = LogisticRegression()
+lg_1.fit(X_train_1,y_train_1)
+lg_pred_1 = lg_1.predict(x_test_1)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_1,lg_pred_1))
+
+# Compute predicted probabilities
+predict_prob_1 = lg_1.predict_proba(x_test_1)
+predict_prob_1[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_1.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(16)
+
+###### Digit two #########
+# Traning data creation 
+train_2 = data_train
+train_2["zero_label"] = 0
+train_2.loc[train_2["Class"] == 2, "zero_label"] = 1
+
+# Test data creation 
+test_2 = data_test
+test_2["zero_label"] = 0
+test_2.loc[test_2["Class"] == 2, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_2 = train_2.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_2 = train_2["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_2 = test_2.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_2 = test_2["zero_label"]
+
+# Develop the classifier 
+lg_2 = LogisticRegression()
+lg_2.fit(X_train_2,y_train_2)
+lg_pred_2 = lg_2.predict(x_test_2)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_2,lg_pred_2))
+
+# Compute predicted probabilities
+predict_prob_2 = lg_2.predict_proba(x_test_2)
+predict_prob_2[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_2.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(5)
+
+
+###### Digit three #########
+# Traning data creation 
+train_3 = data_train
+train_3["zero_label"] = 0
+train_3.loc[train_3["Class"] == 3, "zero_label"] = 1
+
+# Test data creation 
+test_3 = data_test
+test_3["zero_label"] = 0
+test_3.loc[test_3["Class"] == 3, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_3 = train_3.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_3 = train_3["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_3 = test_3.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_3 = test_3["zero_label"]
+
+# Develop the classifier 
+lg_3 = LogisticRegression()
+lg_3.fit(X_train_3,y_train_3)
+lg_pred_3 = lg_3.predict(x_test_3)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_3,lg_pred_3))
+
+# Compute predicted probabilities
+predict_prob_3 = lg_3.predict_proba(x_test_3)
+predict_prob_3[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_3.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(3)
+
+
+###### Digit four #########
+# Traning data creation 
+train_4 = data_train
+train_4["zero_label"] = 0
+train_4.loc[train_4["Class"] == 4, "zero_label"] = 1
+
+# Test data creation 
+test_4 = data_test
+test_4["zero_label"] = 0
+test_4.loc[test_4["Class"] == 4, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_4 = train_4.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_4 = train_4["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_4 = test_4.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_4 = test_4["zero_label"]
+
+# Develop the classifier 
+lg_4 = LogisticRegression()
+lg_4.fit(X_train_4,y_train_4)
+lg_pred_4 = lg_4.predict(x_test_4)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_4,lg_pred_4))
+# Compute predicted probabilities
+predict_prob_4 = lg_4.predict_proba(x_test_4)
+predict_prob_4[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_4.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(19)
+
+
+###### Digit five #########
+# Traning data creation 
+train_5 = data_train
+train_5["zero_label"] = 0
+train_5.loc[train_5["Class"] == 5, "zero_label"] = 1
+
+# Test data creation 
+test_5 = data_test
+test_5["zero_label"] = 0
+test_5.loc[test_5["Class"] == 5, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_5 = train_5.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_5 = train_5["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_5 = test_5.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_5 = test_5["zero_label"]
+
+# Develop the classifier 
+lg_5 = LogisticRegression()
+lg_5.fit(X_train_5,y_train_5)
+lg_pred_5 = lg_5.predict(x_test_5)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_5,lg_pred_5))
+# Compute predicted probabilities
+predict_prob_5 = lg_5.predict_proba(x_test_5)
+predict_prob_5[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_5.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(8)
+
+
+###### Digit six #########
+# Traning data creation 
+train_6 = data_train
+train_6["zero_label"] = 0
+train_6.loc[train_6["Class"] == 6, "zero_label"] = 1
+
+# Test data creation 
+test_6 = data_test
+test_6["zero_label"] = 0
+test_6.loc[test_6["Class"] == 6, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_6 = train_6.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_6 = train_6["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_6 = test_6.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_6 = test_6["zero_label"]
+
+# Develop the classifier 
+lg_6 = LogisticRegression()
+lg_6.fit(X_train_6,y_train_6)
+lg_pred_6 = lg_6.predict(x_test_6)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_6,lg_pred_6))
+# Compute predicted probabilities
+predict_prob_6 = lg_6.predict_proba(x_test_6)
+predict_prob_6[:,1]
+
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_6.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(18)
+
+
+###### Digit seven #########
+# Traning data creation 
+train_7 = data_train
+train_7["zero_label"] = 0
+train_7.loc[train_7["Class"] == 7, "zero_label"] = 1
+
+# Test data creation 
+test_7 = data_test
+test_7["zero_label"] = 0
+test_7.loc[test_7["Class"] == 7, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_7 = train_7.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_7 = train_7["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_7 = test_7.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_7 = test_7["zero_label"]
+
+# Develop the classifier 
+lg_7 = LogisticRegression()
+lg_7.fit(X_train_7,y_train_7)
+lg_pred_7 = lg_7.predict(x_test_7)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_7,lg_pred_7))
+# Compute predicted probabilities
+predict_prob_7 = lg_7.predict_proba(x_test_7)
+predict_prob_7[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_7.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(6)
+
+
+###### Digit eight #########
+# Traning data creation 
+train_8 = data_train
+train_8["zero_label"] = 0
+train_8.loc[train_8["Class"] == 8, "zero_label"] = 1
+
+# Test data creation 
+test_8 = data_test
+test_8["zero_label"] = 0
+test_8.loc[test_8["Class"] == 8, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_8 = train_8.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_8 = train_8["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_8 = test_8.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_8 = test_8["zero_label"]
+
+# Develop the classifier 
+lg_8 = LogisticRegression()
+lg_8.fit(X_train_8,y_train_8)
+lg_pred_8 = lg_8.predict(x_test_8)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_8,lg_pred_8))
+# Compute predicted probabilities
+predict_prob_8 = lg_8.predict_proba(x_test_8)
+predict_prob_8[:,1]
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_8.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(23)
+
+
+###### Digit nine #########
+# Traning data creation 
+train_9 = data_train
+train_9["zero_label"] = 0
+train_9.loc[train_9["Class"] == 9, "zero_label"] = 1
+
+# Test data creation 
+test_9 = data_test
+test_9["zero_label"] = 0
+test_9.loc[test_9["Class"] == 9, "zero_label"] = 1 
+
+# Assign feature varible for traning dataset
+X_train_9 = train_9.loc[:,"Pixel 1" : "Pixel 784"]
+
+# Assign target varible for traning dataset
+y_train_9 = train_9["zero_label"]
+
+# Assign feature varible for testing dataset
+x_test_9 = test_9.loc[:,"Pixel 1" : "Pixel 784"]
+# Assign target varible for testing dataset
+y_test_9 = test_9["zero_label"]
+
+# Develop the classifier 
+lg_9 = LogisticRegression()
+lg_9.fit(X_train_9,y_train_9)
+lg_pred_9 = lg_9.predict(x_test_9)
+print("Logistic Regression accuracy:", metrics.accuracy_score(y_test_9,lg_pred_9))
+# Compute predicted probabilities
+predict_prob_9 = lg_9.predict_proba(x_test_9)
+predict_prob_9[:,1]
+
+
+# Visualizate the digit 
+def visualization(item):
+    trydata = np.array(X_train_9.iloc[item,0:785])
+    view = trydata.reshape(28,28)
+
+    return(plt.imshow(view, cmap='Greens'))
+visualization(0)
+
+
+# Creating a new dataframe with probabilities for numbers 
+probs = [predict_prob_0[:,1], predict_prob_1[:,1], predict_prob_2[:,1], predict_prob_3[:,1], predict_prob_4[:,1], predict_prob_5[:,1], predict_prob_6[:,1], predict_prob_7[:,1], predict_prob_8[:,1], predict_prob_9[:,1]]
+probs = pd.DataFrame()
+predict_prob_0[:,1].shape
+
+# Adding names for the coloms 
+probs["prob_for_0"] = predict_prob_0[:,1]
+probs["prob_for_1"] = predict_prob_1[:,1]
+probs["prob_for_2"] = predict_prob_2[:,1]
+probs["prob_for_3"] = predict_prob_3[:,1]
+probs["prob_for_4"] = predict_prob_4[:,1]
+probs["prob_for_5"] = predict_prob_5[:,1]
+probs["prob_for_6"] = predict_prob_6[:,1]
+probs["prob_for_7"] = predict_prob_7[:,1]
+probs["prob_for_8"] = predict_prob_8[:,1]
+probs["prob_for_9"] = predict_prob_9[:,1]
+probs.head()
+
+
+# Converting dataframe into array
+probs_array = np.array(probs.iloc[:,:])
+probs_array
+
+# Using softmax function 
+from scipy.special import softmax
+softm = softmax(probs_array,axis=0)
+softm.sum(axis=0)
+softm.shape
+
+soft_dt = pd.DataFrame(softm)
+# Find the index of the maximum value, The output is a pandas series containing the column label for each row which has the maximum value
+max_val_dt = soft_dt.idxmax(axis=1)
+max_val_dt
+
+
+# Creating confusion matrix 
+import scikitplot as skplt
+skplt.metrics.plot_confusion_matrix(
+    data_test["Class"],
+    max_val_dt,
+    figsize=(12,12))
